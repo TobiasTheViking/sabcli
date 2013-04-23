@@ -1,0 +1,156 @@
+= Changelog =
+  = SABcurses 0.7-11 =
+    * A lot of fixes
+	
+  = SABcurses 0.5-6 =
+    * Added colors to highlight certain areas.
+    * Properly handle a missing server.
+
+  = SABcli 0.5-11 =
+    * Fixed issue #3. (Patch supplied by sakartu)
+
+  = SABcli 0.5-10 =
+    * Updated API to 0.5.4
+
+  = SABcurses 0.5-5 =
+    * Update API to 0.5.4
+
+  = SABcurses 0.5-4 =
+    * Fixed crash when display was smaller than strings being printed.
+
+  = SABcurses 0.5-3 =
+    * Updated API to 0.5.3
+    * Client now quits as soon as the server has shutdown.
+
+  = SABcli 0.5-9 =
+    * Updated API to 0.5.3
+
+  = SABcurses 0.5-2 =
+    * Fixed crash when resizing.
+    * Edit fields now uses insert mode.
+
+  = SABcurses 0.5-1 =
+    * Fixed crash when deleting last entry in history.
+
+  = SABcurses 0.5 =
+    * Fixed history bug where a newline was sometimes missing.
+    * Fixed stupid scroll bug.
+
+  = SABcli 0.5-8 =
+    * Updated API to 0.5.2
+
+  = SABcurses 0.4-beta =
+    * Full curses implementation of the cli client.
+    * Version will be bumped to 0.5 once it has been through more testing.
+    * Incremental updates within 0.4 with no specific version number:
+      * Extreme speedup
+        * Lists of less than 100 items appear perfect.
+        * Lists of less than 1500 items appear to be working fine, though slight lag.
+        * Lists of about 4000 items have noticeable lag.
+        * Further list redraw speedup should be done by, well, not redrawing on every key press.
+      * Rename bug(didn't work with spaces)
+      * Clear editfields properly
+      * Added more advanced keymapping for advanced users.
+      * Further speedup
+        * Lists of about 6000 items appear perfect.
+      * New layout/design for application.
+      * Updated api to 0.5.2
+
+  = SABcli 0.5-7 =
+    * Added support for new API calls in 0.5.2rc1
+    * Added transfer stats to history view
+
+  = SABcli 0.5-6 =
+    * Repaired broken "delete" function
+    * Added watch capability
+
+  = SABcli 0.5-5 =
+    * Added colours
+    * Now properly handles wrong id's instead of crashing.
+
+  = SABcli 0.5-4 =
+    * Minor bugfixes
+    * Finished refactoring the entire program
+    * Removed dependency on xmltopy
+    * Renamed to SABcli 
+    * Added DEBUG environment variable
+    * Added project to google code project
+    * Source code licensed as GPLv3.
+        * Original version (called 0.1 here) by Meethune Bhowmick.
+        * There is no code by Meethune Bhowmick left in the GPLv3 version.
+        * Everything has been refactored to ensure compliance with GPL.
+
+  = SABcli 0.5-3 =
+    * Minor bugfixes 
+    * Code cleanup and refactor
+    * Added warnings. (Client will now warn you if queue size is bigger than free space, or total space, on destination device).
+    * The layout of the queue screen has been improved.
+
+  = SABcli 0.5-2 =
+    * Updated/Simplified queue view
+    * Added progress bar to queue view
+    * Minor changes in Warnings view (added whitespaces to make it slightly prettier)
+
+  = SABcli 0.5-1 =
+    * Minor cleanup
+    * Cleanup of help screen
+    * History is now in reverse order(newest last)
+    * Added Pause individual download
+    * Added Resume individal download
+    * Added status for all items in queue
+    * Added details view for items in queue
+    * Added temporary pause
+    * Added ability to delete multiple items from the queue, or the entire queue
+
+  = SABcli 0.5 =
+    * Version bumped to version 0.5 since all the functionality seems to be there
+    * Replaced the NZO_id with index id in all functions.
+    * Now shows queue if launched with no command.
+    * Much improved queue screen
+       * 3 line layout.
+       * Fixed problem with too many whitespaces.
+       * Added average age
+       * Added Timeleft
+       * Added Priority
+       * Added PostProcessing.
+       * Added percentage for individual downloads, and for total queue.
+    * Better feedback on all functions.
+       * These functions "remove, rename, move, priority, postprocessing, addurl, pause and resume" now all give the queue screen as output.
+    * Much improved history screen.
+      * Now shows if par verify passed or failed. 
+      * Same for unpack. 
+      * Shows what went wrong on failure.
+      * There is no feedback about delete, so that has been left out.
+    * Changed temp/target to free/total on target. - That is, free/total disk space on target disk.
+
+  = SABcli 0.4 =
+    * Added argument support for
+      * Hostname
+      * Port
+      * Username
+      * Password
+      * Apikey
+
+  = SABcli 0.3 =
+    * added priority support
+    * added rename support
+    * added remove support
+    * added pathget support
+    * added move support. (move items in download queue)
+    * added postproccessing support
+    * added queuecompleted support <- NOT TESTED
+
+  = SABcli 0.2 =
+    * Added support for 0.5.0 ( newzbin not tested )
+    * The command "status" is now called "queue"
+    * Added the environment variable "SABCLICFG" so you can now define the location of the config file.
+    * Added Warnings
+    * Added History (And support for delete of ALL history. Does anyone want selective history deletion? Is pretty easy to add)
+    * Added newapikey support. 
+    * Added speedlimit support.
+    * Added version support. (Shows program version, api version, and daemon version. Tests if api and daemon version match)
+
+  = SABcli 0.1 =
+    * Original version from http://www.mercymachines.net/scripts/sabnzbd_client.py
+    * File contains no license or copyright information.
+    * Original application (called sabnzbd_client.py) was created by Meethune Bhowmick
