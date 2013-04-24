@@ -385,7 +385,10 @@ class SABnzbdCore( object ):
 		itemp = []
 		# Save details
 		self.details['nzo_id'].append(each['nzo_id'])
-		self.details['unpackopts'].append(int(each['unpackopts']))
+                try:
+                    self.details['unpackopts'].append(int(each['unpackopts']))
+                except:
+                    pass
 		self.details['filename'].append(each['filename'])
 		self.details['priority'].append(priority[each['priority']])
 
