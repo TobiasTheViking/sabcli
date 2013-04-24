@@ -372,6 +372,8 @@ class SABnzbdCore( object ):
             for each in slots:
 		if tailLength < len(each['mb']):
 		    tailLength = len(each['mb'])
+                if not each["unpackopts"]:
+                    each["unpackopts"] = 0
 	    tailLength += tailLength
 
 	    priority = { 'Low': -1, 'Normal': 0, 'High': 1, 'Force': 2, 'Repair': 3}
@@ -385,10 +387,7 @@ class SABnzbdCore( object ):
 		itemp = []
 		# Save details
 		self.details['nzo_id'].append(each['nzo_id'])
-                try:
-                    self.details['unpackopts'].append(int(each['unpackopts']))
-                except:
-                    self.details['unpackopts'].append(0)
+                self.details['unpackopts'].append(int(each['unpackopts']))
 		self.details['filename'].append(each['filename'])
 		self.details['priority'].append(priority[each['priority']])
 
