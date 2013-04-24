@@ -388,7 +388,7 @@ class SABnzbdCore( object ):
                 try:
                     self.details['unpackopts'].append(int(each['unpackopts']))
                 except:
-                    pass
+                    self.details['unpackopts'].append(0)
 		self.details['filename'].append(each['filename'])
 		self.details['priority'].append(priority[each['priority']])
 
